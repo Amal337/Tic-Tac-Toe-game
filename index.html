@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="main" id="main">
+        <!-- title -->
+        <div class="header">
+            <img id="img" src="/img/tic-tac-toe.png" alt="">
+            <h1 id="title">Tic Tac Toe</h1>
+        </div>
+        <!-- players' names display -->
+        <div id="names" class="names hide">
+            <h3 id="xName">Player X:</h3>
+            <h3 id="oName">Player O:</h3>
+        </div>
+        <!-- Game board -->
+        <div class="box-board hide" id="box-board">
+            <div class="board" id="board"></div>
+            <button type="submit" id="restart" class="btn" onclick="restart()">RESTART</button>
+        </div>
+        <!-- START the game -->
+        <button class="open-form" id ="btn-open" onclick="openForm()">START</button>
+    
+        <!-- filling names form -->
+        <form id="myForm" class="hide">
+            <button type="submit" class="btn cancel" id="close" onclick="closeForm()">X</button>
+            <label for="x">Player X:</label>
+            <input type="text" name="x" id="x">
+
+            <label for="o">Player O:</label>
+            <input type="text" name="o" id="o">
+
+            <button type="submit" id="add" class="btn" onclick="displayNames()">NEXT</button>
+        
+        </form>
+    </main>
+</body>
+<script src="main.js"></script>
+</html>
